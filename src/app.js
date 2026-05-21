@@ -27,17 +27,17 @@ const authLimiter = rateLimit({
 });
 app.use('/api/auth/', authLimiter);
 
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/users', require('./routes/users'));
-app.use('/api/colleges', require('./routes/colleges'));
-app.use('/api/mentors', require('./routes/mentors'));
-app.use('/api/mentorship', require('./routes/mentorship'));
-app.use('/api/chat', require('./routes/chat'));
-app.use('/api/ai', require('./routes/ai'));
-app.use('/api/discussions', require('./routes/discussions'));
-app.use('/api/jobs', require('./routes/jobs'));
-app.use('/api/events', require('./routes/events'));
-app.use('/api/notifications', require('./routes/notifications'));
+app.use('/api/auth', require('../routes/auth'));
+app.use('/api/users', require('../routes/users'));
+app.use('/api/colleges', require('../routes/colleges'));
+app.use('/api/mentors', require('../routes/mentors'));
+app.use('/api/mentorship', require('../routes/mentorship'));
+app.use('/api/chat', require('../routes/chat'));
+app.use('/api/ai', require('../routes/ai'));
+app.use('/api/discussions', require('../routes/discussions'));
+app.use('/api/jobs', require('../routes/jobs'));
+app.use('/api/events', require('../routes/events'));
+app.use('/api/notifications', require('../routes/notifications'));
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
